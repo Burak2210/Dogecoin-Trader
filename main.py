@@ -2,8 +2,9 @@ import sys
 import pygame
 from pygame import mixer
 import random
-import threading
-import time
+
+# import threading
+# import time
 
 pygame.init()
 mixer.init()
@@ -18,14 +19,15 @@ background = pygame.image.load("bg.png")
 
 # set button hitbox, image and sounds
 dogecoin_logo = pygame.image.load("dogecoin.png")
-dogecoin_logo = pygame.transform.scale(dogecoin_logo, (dogecoin_logo.get_width() * 0.09, dogecoin_logo.get_height() * 0.09))
+dogecoin_logo = pygame.transform.scale(dogecoin_logo,
+                                       (dogecoin_logo.get_width() * 0.09, dogecoin_logo.get_height() * 0.09))
 buy = pygame.image.load("buy.png")
 button_buy = pygame.draw.rect(screen, (0, 0, 0), (210, 130, buy.get_width(), buy.get_height()))
 sell = pygame.image.load("sell.png")
 button_sell = pygame.draw.rect(screen, (0, 0, 0), (210, 300, sell.get_width(), sell.get_height()))
 dollar_image = pygame.image.load("dollar.png")
-warning = pygame.image.load("warning.png")
-warning = pygame.transform.scale(warning, (warning.get_width() * 0.5, warning.get_height() * 0.5))
+# warning = pygame.image.load("warning.png")
+# warning = pygame.transform.scale(warning, (warning.get_width() * 0.5, warning.get_height() * 0.5))
 coin_sound = mixer.Sound("coin.wav")
 mixer.Sound.set_volume(coin_sound, 0.5)
 mixer.music.load("background_music.mp3")
